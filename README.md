@@ -4,8 +4,9 @@ A functional clone of the Signal messaging app (desktop + Android-style mobile l
 
 **Stack:** Next.js 14 (TypeScript) · FastAPI (Python) · SQLite · WebSockets
 
-- Live demo: `<your-vercel-url>`
-- API (Render): `<your-render-url>`
+- Live demo: https://signal-clone-sigma.vercel.app/
+- API (Render): https://signal-clone-su3x.onrender.com — note: hosted on Render's free tier, so the first request after a period of inactivity can take up to a minute while the server wakes up. If the app shows "Failed to fetch", wait a moment and retry.
+- API docs: https://signal-clone-su3x.onrender.com/docs
 - Test logins: phones `+910000000000` … `+910000000004` (Alice, Bob, Carol, Dave, Eve) · OTP **`123456`** (mocked). Any new phone number registers a new user.
   Tip: open two browsers (one incognito) as different users to see real-time features.
 
@@ -61,7 +62,7 @@ Auth: `Authorization: <token>` header on REST; `token` query param on the WebSoc
 ```bash
 # 1) backend  (http://localhost:8000)
 cd backend
-python3 -m venv venv && source venv/bin/activate     # optional but recommended
+python3 -m venv venv && source venv/bin/activate     
 pip install -r requirements.txt
 python3 -m uvicorn main:app --reload
 
